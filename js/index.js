@@ -49,6 +49,10 @@ middle.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 let mulitAnchor = document.querySelectorAll('a');
 
+
+
+
+
 for(let i = 0; i < mulitAnchor.length; i++){
   mulitAnchor[i].textContent = siteContent["nav"]["nav-item-"+(i+1)]
   mulitAnchor[i].style.color = "green";
@@ -90,3 +94,23 @@ h1.textContent = siteContent["cta"]["h1"]
 let butt = document.querySelector("button");
 
 butt.textContent = siteContent["cta"]["button"]
+
+
+let guy = document.querySelector('nav')
+
+let yo = document.createElement('a')
+
+yo.style.color = "green";
+
+guy.prepend(yo);
+
+yo.textContent = "Up"
+
+let yo2 = document.createElement('a')
+
+yo2.style.color = 'green';
+
+yo2.textContent = "Down"
+
+
+guy.appendChild(yo2);
